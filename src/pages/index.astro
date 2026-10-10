@@ -1,16 +1,30 @@
 ---
+import Base from "../base.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base>
+  <div class="parent">
+    <div class="header">
+      <img
+        class="avatar"
+        src="https://dp.nea.moe/avatar/776037479094550529.png"
+      />
+      <h1>Noemi's site</h1>
+    </div>
+  </div>
+</Base>
+<style>
+  .parent {
+    display: flex;
+    margin: 2.5em;
+  }
+  .header {
+    display: flex;
+    gap: 1.5em;
+  }
+  .avatar {
+    border-radius: 50%;
+    width: 5.5em;
+    height: 5.5em;
+  }
+</style>
