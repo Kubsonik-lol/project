@@ -1,30 +1,162 @@
 ---
 import Base from "../base.astro";
+import Seperator from "../seperator.astro";
 ---
 
 <Base>
   <div class="parent">
     <div class="header">
       <img
+        alt="Noemi's avatar"
         class="avatar"
         src="https://dp.nea.moe/avatar/776037479094550529.png"
       />
       <h1>Noemi's site</h1>
     </div>
+    <Seperator />
+    <h1>Welcome :3</h1>
+    <div class="aboutme">
+      <img
+        src="/src/images/travis-scott-fish.jpg"
+        height="159"
+        width="318"
+        alt="Trafish Scott"
+      />
+      <p>
+        Hi! This isn't <em>really</em> finished yet, I'll get to work soon though!
+        &lt;3
+      </p>
+    </div>
+    <h2>Friends</h2>
+    <div class="buttons">
+      <a href="https://iamw.ing"
+        ><img
+          src="/src/images/88x31/wing.gif"
+          title="wing"
+          alt="Wing's 88x31"
+          width="88"
+          height="31"
+        /></a
+      >
+      <a href="https://vendicated.dev">
+        <img
+          src="/src/images/88x31/vee.gif"
+          title="vee"
+          alt="Vendicated's 88x31"
+          width="88"
+          height="31"
+        />
+      </a>
+      <a href="https://jadestone.dev">
+        <img
+          src="/src/images/88x31/jade.gif"
+          title="jade"
+          alt="Jadestone's 88x31"
+          width="88"
+          height="31"
+        />
+      </a>
+      <a href="https://claration.dev">
+        <img
+          src="/src/images/88x31/sammy.png"
+          title="sammy"
+          alt="Claration's 88x31"
+          width="88"
+          height="31"
+        />
+      </a>
+      <a href="https://sadan.zip"
+        ><img
+          src="/src/images/88x31/sadan.png"
+          title="sadan"
+          alt="Sadan's 88x31"
+          width="88"
+          height="31"
+        /></a
+      >
+      <a href="https://kneesox.moe"
+        ><img
+          src="/src/images/88x31/kneesox.png"
+          title="kneesox"
+          alt="Kneesox's 88x31"
+          width="88"
+          height="31"
+        /></a
+      >
+      <a href="https://mugman.tech"
+        ><img
+          src="/src/images/88x31/mugman.gif"
+          title="mugman"
+          alt="Mugman's 88x31"
+          width="88"
+          height="31"
+        /></a
+      >
+      <a href="https://amy.rip">
+        <img
+          src="/src/images/88x31/amy.png"
+          title="amy"
+          alt="Amy's 88x31"
+          width="88"
+          height="31"
+        /></a
+      >
+      <a href="https://nurmarv.in">
+        <img
+          src="/src/images/88x31/marvin.png"
+          title="marvin"
+          alt="Marvin's 88x31"
+          width="88"
+          height="31"
+        />
+      </a>
+      <a href="https://uguu.tngl.io">
+        <img
+          src="/src/images/88x31/keiran.png"
+          title="keiran"
+          alt="Keiran's 88x31"
+          width="88"
+          height="31"
+        /></a
+      >
+    </div>
+    <Seperator />
+    <div class="footer">
+      <p>
+        Made with <a href="https://astro.build/">Astro</a>!
+      </p>
+    </div>
   </div>
+
+  <style>
+    .parent {
+      display: flex;
+      flex-direction: column;
+      margin: 2.5em;
+    }
+    .header {
+      display: flex;
+      gap: 1.5em;
+    }
+    .avatar {
+      border-radius: 50%;
+      width: 5.5em;
+      height: 5.5em;
+    }
+    .aboutme {
+      display: flex;
+      gap: 1.5em;
+      font-size: 1.8em;
+    }
+    .buttons {
+      display: flex;
+      gap: 1em;
+      flex-wrap: wrap;
+    }
+    .footer {
+      font-size: 1.5em;
+      text-align: center;
+      margin-top: 2em;
+    }
+  </style>
 </Base>
-<style>
-  .parent {
-    display: flex;
-    margin: 2.5em;
-  }
-  .header {
-    display: flex;
-    gap: 1.5em;
-  }
-  .avatar {
-    border-radius: 50%;
-    width: 5.5em;
-    height: 5.5em;
-  }
-</style>
