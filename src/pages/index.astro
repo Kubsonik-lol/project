@@ -1,9 +1,14 @@
 ---
 import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
 import Button88x31 from "../button88x31.astro";
 import Base from "../base.astro";
 import Seperator from "../seperator.astro";
 import trafish from "../images/travis-scott-fish.jpg";
+const socials = import.meta.glob<ImageMetadata>("../images/socials/*", {
+  eager: true,
+  import: "default",
+});
 ---
 
 <Base>
@@ -45,10 +50,26 @@ import trafish from "../images/travis-scott-fish.jpg";
     <Seperator />
     <div class="links">
       <h2>Socials</h2>
-      <p>
-        okay so i started doing this but i couldnt finish remind me to finish
-        this
-      </p>
+      <div class="button-row">
+        <a href="https://github.com/Kubsonik-lol" target="_blank">
+          <Image
+            src={socials["../images/socials/github.svg"]}
+            width="45"
+            height="45"
+            alt="GitHub"
+            title="My GitHub"
+          />
+        </a>
+        <a href="https://discord.com/users/776037479094550529" target="_blank">
+          <Image
+            src={socials["../images/socials/discord.svg"]}
+            width="45"
+            height="45"
+            alt="Discord"
+            title="My Discord"
+          />
+        </a>
+      </div>
     </div>
     <div class="footer">
       <p>
@@ -82,6 +103,13 @@ import trafish from "../images/travis-scott-fish.jpg";
       display: flex;
       gap: 1em;
       flex-wrap: wrap;
+    }
+    .links {
+      display: block;
+    }
+    .button-row {
+      display: flex;
+      gap: 1.5em;
     }
     .footer {
       font-size: 1.5em;
