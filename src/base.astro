@@ -1,5 +1,4 @@
 ---
-
 ---
 
 <html lang="en">
@@ -18,6 +17,27 @@
         color: #fff;
       }
     </style>
+    <script
+      id="discord:component-embed"
+      type="application/json"
+      set:html={JSON.stringify({
+        component: {
+          type: 17,
+          accent_color: 460062,
+          components: [
+            {
+              type: 10,
+              content: "# **[Noemi's website](https://noemi.moe)**\n",
+            },
+            {
+              type: 10,
+              content:
+                "haiii!!! this is my clearly unfinished website also placeholder text lorem ipsum whatever whatever\n",
+            },
+          ],
+        },
+      })}
+    ></script>
   </head>
   <body>
     <slot />
